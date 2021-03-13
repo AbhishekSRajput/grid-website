@@ -1,0 +1,36 @@
+.challenge-container {
+	background-color: #eee;
+	width: 1000px;
+	margin: 30px auto;
+
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: 50px 100px 150px 50px;
+	grid-gap: 20px;
+}
+
+.challenge__ {
+	&header {
+		background-color: pink;
+		grid-column: 1/-1;
+	}
+
+	&smallbox {
+		background-color: aqua;
+	}
+
+	&sidebar {
+		background-color: orange;
+		grid-row: 2/4;
+		grid-column: 4/5;
+	}
+	&main {
+		background-color: brown;
+		grid-column: 1/4;
+	}
+
+	&footer {
+		background-color: forestgreen;
+		grid-column: 1/-1;
+	}
+}
