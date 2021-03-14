@@ -1,0 +1,20 @@
+.implicit-container {
+	width: 1000px;
+	margin: 30px auto;
+	background-color: #ddd;
+
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 150px);
+	grid-gap: 10px;
+
+	grid-auto-rows: 100px;
+
+	.item {
+		padding: 20px;
+		color: white;
+		font-family: sans-serif;
+		font-size: 30px;
+		background-color: pink;
+	}
+}
