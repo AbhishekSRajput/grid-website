@@ -46,15 +46,66 @@
 
 //Method no. 2:: Line Names
 
+// .challenge-container {
+// 	background-color: #eee;
+// 	width: 1000px;
+// 	margin: 30px auto;
+
+// 	display: grid;
+// 	grid-template-columns: repeat(3, [col-start] 1fr [col-end]) 300px [grid-end];
+// 	grid-template-rows: [header-start]50px[header-end box-start]100px[box-end main-start]250px[main-end footer-start]50px[footer-end];
+// 	grid-gap: 20px;
+
+// 	& > * {
+// 		padding: 5px;
+// 		color: white;
+// 		font-size: 30px;
+// 		font-family: sans-serif;
+// 	}
+// }
+
+// .challenge__ {
+// 	&header {
+// 		background-color: pink;
+// 		grid-column: col-start 1 / grid-end;
+// 	}
+
+// 	&smallbox {
+// 		background-color: aqua;
+// 	}
+
+// 	&sidebar {
+// 		background-color: orange;
+// 		grid-row: box-start/main-end;
+// 		grid-column: col-end 3 / grid-end;
+// 	}
+// 	&main {
+// 		background-color: brown;
+// 		grid-column: col-start 1 / col-end 3;
+// 	}
+
+// 	&footer {
+// 		background-color: forestgreen;
+// 		grid-column: col-start 1 / grid-end;
+// 	}
+// }
+
+//Method NO. 3 :: Naming Grid Area
 .challenge-container {
 	background-color: #eee;
 	width: 1000px;
 	margin: 30px auto;
 
 	display: grid;
-	grid-template-columns: repeat(3, [col-start] 1fr [col-end]) 300px [grid-end];
-	grid-template-rows: [header-start]50px[header-end box-start]100px[box-end main-start]250px[main-end footer-start]50px[footer-end];
+	grid-template-columns: repeat(3, 1fr) 300px;
+	grid-template-rows: 50px 100px 250px 50px;
 	grid-gap: 20px;
+
+	grid-template-areas:
+		'. head head .'
+		'box-1 box-2 box-3 sidebar'
+		'main main main sidebar'
+		'foot foot foot foot';
 
 	& > * {
 		padding: 5px;
@@ -67,25 +118,35 @@
 .challenge__ {
 	&header {
 		background-color: pink;
-		grid-column: col-start 1 / grid-end;
+		grid-area: head;
 	}
 
-	&smallbox {
-		background-color: aqua;
+	&smallbox-1 {
+		grid-area: box-1;
+		background-color: aquamarine;
+	}
+
+	&smallbox-2 {
+		grid-area: box-2;
+		background-color: bisque;
+	}
+
+	&smallbox-3 {
+		grid-area: box-3;
+		background-color: rebeccapurple;
 	}
 
 	&sidebar {
 		background-color: orange;
-		grid-row: box-start/main-end;
-		grid-column: col-end 3 / grid-end;
+		grid-area: sidebar;
 	}
 	&main {
 		background-color: brown;
-		grid-column: col-start 1 / col-end 3;
+		grid-area: main;
 	}
 
 	&footer {
 		background-color: forestgreen;
-		grid-column: col-start 1 / grid-end;
+		grid-area: foot;
 	}
 }
