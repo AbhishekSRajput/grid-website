@@ -1,11 +1,59 @@
+//positioning grid items by Line Number
+
+// .challenge-container {
+// 	background-color: #eee;
+// 	width: 1000px;
+// 	margin: 30px auto;
+
+// 	display: grid;
+// 	grid-template-columns: repeat(3, 1fr) 300px;
+// 	grid-template-rows: 50px 100px 250px 50px;
+// 	grid-gap: 20px;
+
+// 	& > * {
+// 		padding: 5px;
+// 		color: white;
+// 		font-size: 30px;
+// 		font-family: sans-serif;
+// 	}
+// }
+
+// .challenge__ {
+// 	&header {
+// 		background-color: pink;
+// 		grid-column: 1/-1;
+// 	}
+
+// 	&smallbox {
+// 		background-color: aqua;
+// 	}
+
+// 	&sidebar {
+// 		background-color: orange;
+// 		grid-row: 2 / span 2;
+// 		grid-column: 4/5;
+// 	}
+// 	&main {
+// 		background-color: brown;
+// 		grid-column: 1 / span 3;
+// 	}
+
+// 	&footer {
+// 		background-color: forestgreen;
+// 		grid-column: 1/-1;
+// 	}
+// }
+
+//Method no. 2:: Line Names
+
 .challenge-container {
 	background-color: #eee;
 	width: 1000px;
 	margin: 30px auto;
 
 	display: grid;
-	grid-template-columns: repeat(3, 1fr) 300px;
-	grid-template-rows: 50px 100px 250px 50px;
+	grid-template-columns: repeat(3, [col-start] 1fr [col-end]) 300px [grid-end];
+	grid-template-rows: [header-start]50px[header-end box-start]100px[box-end main-start]250px[main-end footer-start]50px[footer-end];
 	grid-gap: 20px;
 
 	& > * {
@@ -19,7 +67,7 @@
 .challenge__ {
 	&header {
 		background-color: pink;
-		grid-column: 1/-1;
+		grid-column: col-start 1 / grid-end;
 	}
 
 	&smallbox {
@@ -28,16 +76,16 @@
 
 	&sidebar {
 		background-color: orange;
-		grid-row: 2 / span 2;
-		grid-column: 4/5;
+		grid-row: box-start/main-end;
+		grid-column: col-end 3 / grid-end;
 	}
 	&main {
 		background-color: brown;
-		grid-column: 1 / span 3;
+		grid-column: col-start 1 / col-end 3;
 	}
 
 	&footer {
 		background-color: forestgreen;
-		grid-column: 1/-1;
+		grid-column: col-start 1 / grid-end;
 	}
 }
