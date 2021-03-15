@@ -1,0 +1,45 @@
+.container {
+	width: 1000px;
+	margin: 30px auto;
+	background-color: #ddd;
+
+	display: grid;
+	grid-template-rows: repeat(2, min-content);
+	grid-template-columns: max-content 1fr 1fr min-content;
+	
+
+	
+
+	.item {
+		padding: 10px;
+		color: black;
+		font-family: sans-serif;
+		font-size: 30px;
+		background-color: pink;
+
+        &--1{
+            background-color: orange;
+        }
+        &--2{
+            background-color: green;
+        }
+        &--3{
+            background-color: violet;
+        }
+        &--4{
+            background-color: blue;
+        }
+        &--5{
+            background-color: red;
+        }
+        &--6{
+            background-color: rebeccapurple;
+        }
+        &--7{
+            background-color: yellow;
+        }
+        &--8{
+            background-color: brown;
+        }
+	}
+}
