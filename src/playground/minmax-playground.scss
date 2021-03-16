@@ -4,9 +4,11 @@
 	background-color: #ddd;
 
 	display: grid;
-	grid-template-rows: minmax(50px,max-content) min-content;
-	grid-template-columns: max-content 1fr 1fr min-content;
+	// grid-template-rows: minmax(50px,max-content) min-content;
+	// grid-template-columns: max-content 1fr 1fr min-content;
 	
+    //using autofill and autoFit
+    grid-template-rows: repeat(2, minmax(150px,min-content));
 
 	
 
