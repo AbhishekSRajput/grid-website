@@ -1,0 +1,42 @@
+.app-container{
+    display: grid;
+    grid-template-rows: 80vh min-content 40vw repeat(3,min-content);
+}
+
+.sidebar{
+    background-color: var(--color-primary);
+}
+
+.header{
+    background-color: var(--color-grey-dark-1);
+}
+
+.realtors{
+    background-color: var(--color-secondary);
+}
+
+.features{
+    background-color: var(--color-grey-light-2);
+}
+
+.story{
+    &__pictures{
+        background-color: var(--color-primary);
+    }
+
+    &__content{
+        background-color: var(--color-grey-light-1);
+    }
+}
+
+.homes{
+    background-color: var(--color-secondary);
+}
+
+.gallery{
+    background-color: var(--color-grey-dark-1);
+}
+
+.footer{
+    background-color: var(--color-secondary);
+}
