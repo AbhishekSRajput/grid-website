@@ -21,6 +21,20 @@ import houseThree from './img/house-3.jpeg';
 import houseFour from './img/house-4.jpeg';
 import houseFive from './img/house-5.jpeg';
 import houseSix from './img/house-6.jpeg';
+import galOne from './img/gal-1.jpeg';
+import galTwo from './img/gal-2.jpeg';
+import galThree from './img/gal-3.jpeg';
+import galFour from './img/gal-4.jpeg';
+import galFive from './img/gal-5.jpeg';
+import galSix from './img/gal-6.jpeg';
+import galSeven from './img/gal-7.jpeg';
+import galEight from './img/gal-8.jpeg';
+import galNine from './img/gal-9.jpeg';
+import galTen from './img/gal-10.jpeg';
+import galEleven from './img/gal-11.jpeg';
+import galTwelve from './img/gal-12.jpeg';
+import galThirteen from './img/gal-13.jpeg';
+import galFourteen from './img/gal-14.jpeg';
 //style
 import './App.scss';
 
@@ -253,7 +267,50 @@ const App = () => {
 					<button className="btn home__btn">Contact Realtors</button>
 				</div>
 			</section>
-			<section className="gallery">gallery</section>
+			<section className="gallery">
+				<figure className="gallery__item gallery__item--1">
+					<img src={galOne} alt="gallery 1" className="gallery__img" />
+				</figure>
+				<figure className="gallery__item gallery__item--2">
+					<img src={galTwo} alt="gallery 2" className="gallery__img" />
+				</figure>
+				<figure className="gallery__item gallery__item--3">
+					<img src={galThree} alt="gallery 3" className="gallery__img" />
+				</figure>
+				<figure className="gallery__item gallery__item--4">
+					<img src={galFour} alt="gallery 4" className="gallery__img" />
+				</figure>
+				<figure className="gallery__item gallery__item--5">
+					<img src={galFive} alt="gallery 5" className="gallery__img" />
+				</figure>
+				<figure className="gallery__item gallery__item--6">
+					<img src={galSix} alt="gallery 6" className="gallery__img" />
+				</figure>
+				<figure className="gallery__item gallery__item--7">
+					<img src={galSeven} alt="gallery 7" className="gallery__img" />
+				</figure>
+				<figure className="gallery__item gallery__item--8">
+					<img src={galEight} alt="gallery 8" className="gallery__img" />
+				</figure>
+				<figure className="gallery__item gallery__item--9">
+					<img src={galNine} alt="gallery 9" className="gallery__img" />
+				</figure>
+				<figure className="gallery__item gallery__item--10">
+					<img src={galTen} alt="gallery 10" className="gallery__img" />
+				</figure>
+				<figure className="gallery__item gallery__item--11">
+					<img src={galEleven} alt="gallery 11" className="gallery__img" />
+				</figure>
+				<figure className="gallery__item gallery__item--12">
+					<img src={galTwelve} alt="gallery 12" className="gallery__img" />
+				</figure>
+				<figure className="gallery__item gallery__item--13">
+					<img src={galThirteen} alt="gallery 13" className="gallery__img" />
+				</figure>
+				<figure className="gallery__item gallery__item--14">
+					<img src={galFourteen} alt="gallery 14" className="gallery__img" />
+				</figure>
+			</section>
 			<footer className="footer">footer</footer>
 		</div>
 	);
