@@ -99,9 +99,11 @@
 		grid-template-columns: repeat(4, 1fr);
 		grid-column-gap: 3rem;
 		justify-items: center;
+		align-items: center;
 
 		img {
 			height: 2.5rem;
+			max-width: 100%;
 			filter: brightness(70%);
 		}
 	}
@@ -110,6 +112,32 @@
 .realtors {
 	background-color: var(--color-secondary);
 	grid-column: col-start 7 / full-end;
+	padding: 3rem;
+
+	display: grid;
+	align-content: center;
+	justify-content: center;
+	justify-items: center;
+	grid-row-gap: 2rem;
+
+	&__list {
+		display: grid;
+		grid-template-columns: min-content max-content;
+		grid-column-gap: 2rem;
+		grid-row-gap: 5vh;
+		align-items: center;
+	}
+	&__img {
+		width: 7rem;
+		display: block;
+		border-radius: 50%;
+	}
+	&__sold {
+		font-size: 1.2rem;
+		text-transform: uppercase;
+		color: var(--color-grey-light-2);
+		margin-top: -3px;
+	}
 }
 
 .features {
