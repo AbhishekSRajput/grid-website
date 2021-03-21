@@ -18,11 +18,93 @@
 	background-color: var(--color-primary);
 	grid-column: sidebar-start/sidebar-end;
 	grid-row: 1/-1;
+
+	display: flex;
+	justify-content: center;
+}
+
+.nav-btn {
+	border: none;
+	border-radius: 0;
+	cursor: pointer;
+	display: block;
+
+	background-color: #fff;
+	height: 2px;
+	width: 4.5rem;
+	margin-top: 4rem;
+
+	&::before,
+	&::after {
+		background-color: #fff;
+		height: 2px;
+		width: 4.5rem;
+		content: '';
+		display: block;
+	}
+
+	&::before {
+		transform: translateY(-1.5rem);
+	}
+
+	&::after {
+		transform: translateY(1.3rem);
+	}
 }
 
 .header {
-	background-color: var(--color-grey-dark-1);
 	grid-column: full-start/col-end 6;
+	background-image: linear-gradient(rgba(#101d2c, 0.93), rgba(#101d2c, 0.93)),
+		url(./img/hero.jpeg);
+	background-size: cover;
+	background-position: center;
+
+	display: grid;
+	grid-template-rows: 1fr min-content 6rem 1fr;
+	grid-template-columns: max-content;
+	grid-row-gap: 1.5rem;
+	justify-content: center;
+
+	padding: 8rem;
+	padding-top: 4rem;
+
+	&__logo {
+		height: 3rem;
+		justify-self: center;
+	}
+
+	&__btn {
+		justify-self: start;
+		align-self: start;
+	}
+	&__seenon-text {
+		font-size: 1.6rem;
+		color: var(--color-grey-light-1);
+
+		display: grid;
+		grid-template-columns: 1fr max-content 1fr;
+		grid-column-gap: 1.5rem;
+		align-items: center;
+
+		&::before,
+		&::after {
+			content: '';
+			height: 1px;
+			display: block;
+			background-color: currentColor;
+		}
+	}
+	&__seenon-logos {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-column-gap: 3rem;
+		justify-items: center;
+
+		img {
+			height: 2.5rem;
+			filter: brightness(70%);
+		}
+	}
 }
 
 .realtors {
@@ -277,6 +359,45 @@
 .footer {
 	background-color: var(--color-secondary);
 	grid-column: full-start/full-end;
+	padding: 8rem;
+}
+
+.nav {
+	list-style: none;
+
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+	grid-gap: 2rem;
+	align-items: center;
+
+	&__link:link,
+	&__link:visited {
+		font-size: 1.4rem;
+		color: #fff;
+		text-decoration: none;
+		font-family: 'Times New Roman', Times, serif;
+		text-transform: uppercase;
+		text-align: center;
+		padding: 1.5rem;
+		display: block;
+		transition: all 0.2s;
+	}
+
+	&__link:hover,
+	&__link:active {
+		background-color: rgba(#fff, 0.05);
+		transform: translateY(-3px);
+	}
+}
+
+.copyright {
+	font-size: 1.5rem;
+	color: var(--color-grey-light-2);
+	margin-top: 6rem;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	width: 70%;
 }
 
 //typography
@@ -288,6 +409,9 @@
 
 .heading-1 {
 	@extend %heading;
+	font-size: 4.5rem;
+	color: var(--color-grey-light-1);
+	line-height: 1;
 }
 .heading-2 {
 	@extend %heading;

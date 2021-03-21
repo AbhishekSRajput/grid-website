@@ -35,14 +35,34 @@ import galEleven from './img/gal-11.jpeg';
 import galTwelve from './img/gal-12.jpeg';
 import galThirteen from './img/gal-13.jpeg';
 import galFourteen from './img/gal-14.jpeg';
+import logo from './img/logo.png';
+import logoBbc from './img/logo-bbc.png';
+import logoBi from './img/logo-bi.png';
+import logoForbes from './img/logo-forbes.png';
+import logoTechCrunch from './img/logo-techcrunch.png';
+
 //style
 import './App.scss';
 
 const App = () => {
 	return (
 		<div className="app-container">
-			<div className="sidebar">sidebar</div>
-			<header className="header">header</header>
+			<div className="sidebar">
+				<button className="nav-btn"></button>
+			</div>
+			<header className="header">
+				<img src={logo} alt="header logo" className="header__logo" />
+				<h3 className="heading-3">Your own home</h3>
+				<h1 className="heading-1">The ultimate personal freedom</h1>
+				<button className="btn header__btn">View our properties</button>
+				<div className="header__seenon-text">seen on</div>
+				<div className="header__seenon-logos">
+					<img src={logoBbc} alt="bbc" />
+					<img src={logoBi} alt="bbc" />
+					<img src={logoForbes} alt="bbc" />
+					<img src={logoTechCrunch} alt="bbc" />
+				</div>
+			</header>
 			<div className="realtors">top 3 realtors</div>
 			<section className="features">
 				<div className="feature">
@@ -311,7 +331,45 @@ const App = () => {
 					<img src={galFourteen} alt="gallery 14" className="gallery__img" />
 				</figure>
 			</section>
-			<footer className="footer">footer</footer>
+			<footer className="footer">
+				<ul className="nav">
+					<li className="nav__item">
+						<a href="#" className="nav__link">
+							Find your dream home
+						</a>
+					</li>
+					<li className="nav__item">
+						<a href="#" className="nav__link">
+							Request proposal
+						</a>
+					</li>
+					<li className="nav__item">
+						<a href="#" className="nav__link">
+							Download home planner
+						</a>
+					</li>
+					<li className="nav__item">
+						<a href="#" className="nav__link">
+							Contact us
+						</a>
+					</li>
+					<li className="nav__item">
+						<a href="#" className="nav__link">
+							Submit your property
+						</a>
+					</li>
+					<li className="nav__item">
+						<a href="#" className="nav__link">
+							Come work with us!
+						</a>
+					</li>
+				</ul>
+				<p className="copyright">
+					&copy; Copyright 2017 by Jonas schmedtmann. this project is done under
+					instructions of the instructor. great course for learning modern css
+					features like flexbox and grid
+				</p>
+			</footer>
 		</div>
 	);
 };
